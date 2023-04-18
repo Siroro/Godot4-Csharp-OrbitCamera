@@ -17,6 +17,7 @@ public partial class OrbitCamera : Camera3D
 
     private Vector3 _rotation;
     private float _distance;
+    private const float halfPi = (float)Math.PI / 2;
 
     public override void _Ready()
     {
@@ -46,7 +47,6 @@ public partial class OrbitCamera : Camera3D
         _rotation.X += -_moveSpeed.Y * (float)delta * RotateSpeed;
         _rotation.Y += _moveSpeed.X * (float)delta * RotateSpeed;
 
-        const float halfPi = (float)Math.PI / 2;
         if (_rotation.X < -halfPi)
         {
             _rotation.X = -halfPi;
