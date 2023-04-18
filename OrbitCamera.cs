@@ -8,7 +8,6 @@ public partial class OrbitCamera : Camera3D
     [Export] public float ZoomSpeed = 50.0f;
     [Export] public float DefaultDistance = 5.0f;
     [Export] public float RotateSpeed = 1.0f;
-    [Export] public float MouseZoomSpeed = 10.0f;
 
     private Node3D Anchor;
     private Vector2 _moveSpeed = new();
