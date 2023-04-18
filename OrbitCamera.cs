@@ -21,10 +21,7 @@ public partial class OrbitCamera : Camera3D
 
     public override void _Ready()
     {
-        if (Anchor == null)
-        {
-            Anchor = GetParent<Node3D>();
-        }
+        Anchor ??= GetParent<Node3D>();
         _distance = DefaultDistance;
         _rotation = Anchor.Transform.Basis.GetRotationQuaternion().GetEuler();
     }
