@@ -82,10 +82,13 @@ public partial class OrbitCamera : Camera3D
             ProcessMouseScroll(@event as InputEventMouseButton);
         }
     }
+    
     private void ProcessMouseRotation(InputEventMouseMotion @event)
     {
         if (Input.IsMouseButtonPressed(MouseButton.Left))
+        {
             _moveSpeed = @event.Relative;
+        }
     }
 
     private void ProcessMouseScroll(InputEventMouseButton @event)
